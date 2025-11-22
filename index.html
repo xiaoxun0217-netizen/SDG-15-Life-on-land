@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SDG 15 — Life on Land</title>
+  <meta name="description" content="SDG 15 — Life on Land. Learn, act and share to protect terrestrial ecosystems." />
+  <style>
+    :root{
+      --accent:#2b8a4d;
+      --muted:#556;
+      --bg:#f4f7f6;
+      --card:#ffffff;
+      --radius:12px;
+      --maxw:1200px;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,#f7fbf9,#f4f7f6); color:#07203a; line-height:1.5}
+    .container{max-width:var(--maxw); margin:0 auto; padding:1rem}
+    /* header: three-column grid so brand is visually centered, nav on right */
+    header{background:transparent; position:sticky; top:0; z-index:30}
+    .header-inner{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:1rem; padding:0.8rem 1rem}
+    .brand{justify-self:center; font-weight:700; color:var(--accent); text-decoration:none; font-size:1.05rem}
+    nav{justify-self:end; display:flex; gap:0.8rem; align-items:center}
+    nav a{padding:0.45rem 0.7rem; text-decoration:none; color:#123; border-radius:8px}
+    nav a:hover{background:rgba(8,20,30,0.04)}
+    /* hero: big image with dark overlay, white text, buttons visible */
+    .hero{min-height:56vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:3rem 1rem; border-radius:0 0 20px 20px;
+      background-image:
+        linear-gradient(rgba(2,8,10,0.48), rgba(2,8,10,0.28)),
+        url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop");
+      background-size:cover; background-position:center; color:white;
+      box-shadow: inset 0 -40px 60px rgba(0,0,0,0.15);
+    }
+    .hero .wrap{max-width:86ch}
+    .hero h1{margin:0 0 0.6rem; font-size:clamp(1.6rem,3.4vw,3rem); font-weight:800; text-shadow:0 4px 18px rgba(0,0,0,0.45)}
+    .hero p{max-width:64ch; margin:0 auto 1.2rem; color:rgba(255,255,255,0.92); font-size:1.05rem}
+    .cta-row{display:inline-flex; gap:0.6rem; align-items:center; flex-wrap:wrap; justify-content:center}
+    .btn{display:inline-block; padding:0.6rem 0.95rem; border-radius:10px; text-decoration:none; font-weight:600; cursor:pointer; border:0}
+    .btn.primary{background:var(--accent); color:white}
+    .btn.secondary{background:transparent; color:white; border:2px solid rgba(255,255,255,0.85); padding:0.5rem 0.9rem}
+    .btn.secondary:hover{background:rgba(255,255,255,0.06)}
+    /* cards */
+    .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:2rem 0}
+    .card{background:var(--card); padding:1.1rem; border-radius:14px; box-shadow:0 10px 26px rgba(11,22,30,0.05)}
+    .card h3{margin:0 0 .4rem}
+    .card .link{display:inline-block; margin-top:.6rem; color:var(--accent); text-decoration:none}
+    /* footer */
+    footer{padding:1rem 0; text-align:center; color:var(--muted); border-top:1px solid rgba(7,32,58,0.04)}
+    /* responsive */
+    @media (max-width:1000px){ .cards{grid-template-columns:repeat(2,1fr)} nav{display:none} }
+    @media (max-width:600px){ .cards{grid-template-columns:1fr} .hero{padding:2rem} .hero h1{font-size:1.6rem} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div></div> <!-- left spacer so brand centers -->
+      <a class="brand" href="index.html">SDG 15 — Life on Land</a>
+      <nav aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="benefits.html">Benefits</a>
+        <a href="actions.html">Actions</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="region" aria-label="Hero">
+      <div class="wrap">
+        <h1>Protecting and restoring the world’s land ecosystems</h1>
+        <p>Practical guidance and actions to protect forests, soils, wetlands and biodiversity. Click a page to learn more or to get involved.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="actions.html">Take action</a>
+          <!-- changed Learn more from plain blue link to visible white outline button -->
+          <a class="btn secondary" href="about.html">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container cards" aria-label="Quick links">
+      <article class="card">
+        <h3>About SDG 15</h3>
+        <p>What SDG 15 protects and the global challenges we face.</p>
+        <a class="link" href="about.html">Open →</a>
+      </article>
+      <article class="card">
+        <h3>Benefits</h3>
+        <p>Why protecting land matters — ecosystem services, climate, livelihoods.</p>
+        <a class="link" href="benefits.html">Open →</a>
+      </article>
+      <article class="card">
+        <h3>Actions You Can Take</h3>
+        <p>Small steps you can take at home, in your community, and in policy.</p>
+        <a class="link" href="actions.html">Open →</a>
+      </article>
+      <article class="card">
+        <h3>Feedback</h3>
+        <p>Share corrections, ideas or volunteer interest with us.</p>
+        <a class="link" href="feedback.html">Open →</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> SDG 15 — Life on Land</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

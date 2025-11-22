@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Actions — SDG 15</title>
+  <meta name="description" content="Actions you can take to help protect land and biodiversity" />
+  <style>
+    :root{
+      --accent:#2b8a4d;
+      --muted:#556;
+      --maxw:1200px;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,#f7fbf9,#f4f7f6); color:#07203a}
+    .container{max-width:var(--maxw); margin:0 auto; padding:1rem}
+    header{background:transparent; position:sticky; top:0; z-index:30}
+    .header-inner{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:1rem; padding:0.8rem 1rem}
+    .brand{justify-self:center; font-weight:700; color:var(--accent); text-decoration:none; font-size:1.05rem}
+    nav{justify-self:end; display:flex; gap:0.8rem; align-items:center}
+    nav a{padding:0.45rem 0.7rem; text-decoration:none; color:#123; border-radius:8px}
+    .hero{min-height:28vh; display:flex; align-items:center; padding:1.6rem 1rem; border-radius:0 0 20px 20px;
+      background-image:
+        linear-gradient(rgba(2,8,10,0.48), rgba(2,8,10,0.28)),
+        url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop");
+      background-size:cover; background-position:center; color:white;
+      box-shadow: inset 0 -20px 40px rgba(0,0,0,0.12);
+    }
+    .hero h1{margin:0 0 0.4rem; font-size:clamp(1.2rem,2.6vw,1.8rem); font-weight:800}
+    main{padding:1.2rem 0}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:1rem}
+    .card{background:#fff; padding:1rem; border-radius:12px; box-shadow:0 10px 20px rgba(8,20,30,0.04)}
+    footer{padding:1rem 0; text-align:center; color:var(--muted); border-top:1px solid rgba(7,32,58,0.04)}
+    @media (max-width:900px){ nav{display:none} .grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div></div>
+      <a class="brand" href="index.html">SDG 15 — Life on Land</a>
+      <nav aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="benefits.html">Benefits</a>
+        <a href="index.html">Home</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" role="region" aria-label="Actions hero">
+    <div class="container">
+      <h1>Actions You Can Take</h1>
+      <p style="color:rgba(255,255,255,0.92); max-width:64ch; margin:0 auto">Practical steps at home, in your community and in policy to protect land and biodiversity.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="grid">
+      <div class="card">
+        <h3>Individual</h3>
+        <ul>
+          <li>Choose sustainably produced food and forest products</li>
+          <li>Reduce waste, compost, favor plant-rich diets</li>
+          <li>Plant native species and restore local habitats</li>
+          <li>Join citizen science projects</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Community & Policy</h3>
+        <ul>
+          <li>Support local restoration and protected areas</li>
+          <li>Advocate for sustainable land-use planning</li>
+          <li>Support fair tenure for indigenous communities</li>
+          <li>Volunteer or partner with conservation groups</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> SDG 15 — Life on Land</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
