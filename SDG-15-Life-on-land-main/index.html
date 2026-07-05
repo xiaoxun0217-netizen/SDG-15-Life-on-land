@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EarthGuard | Protecting Our Planet's Ecosystems</title>
+  <meta name="description" content="EarthGuard - Learn, act and share to protect terrestrial ecosystems, forests, and biodiversity for a sustainable future." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Progress bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo"></span>
+        EarthGuard
+      </a>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="ecosystem.html">Ecosystems</a>
+        <a href="resources.html">Resources</a>
+        <a href="game.html">Game</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="donate-btn-header" onclick="openDonationModal()" aria-label="Donate">💚 Donate</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" role="region" aria-label="Hero" aria-describedby="hero-description">
+      <div class="wrap">
+        <h1>Protecting Our Planet's Precious Ecosystems</h1>
+        <p id="hero-description">Join the global movement to conserve forests, restore biodiversity, and ensure a sustainable future for all life on Earth.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="about.html">
+            <span>Learn Our Mission</span>
+            <span class="btn-icon">→</span>
+          </a>
+          <a class="btn secondary" href="ecosystem.html">Explore Ecosystems</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>EarthGuard is dedicated to protecting, restoring, and promoting sustainable use of terrestrial ecosystems aligned with the United Nations Sustainable Development Goal 15 (Life on Land). We work to halt deforestation, combat desertification, reverse land degradation, and stop biodiversity loss. Our mission is to ensure that the world's forests, woodlands, grasslands, and wetlands remain vital sources of biodiversity and ecosystem services. Through education, advocacy, and community action, we strive to create a world where nature and humanity thrive together. Every ecosystem we protect contributes to global climate stability, clean water, productive soil, and the survival of countless species that depend on healthy terrestrial environments.</p>
+    </section>
+
+    <section class="stats">
+      <h2>The State of Our Planet</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="80">0</span>
+          <span class="stat-label">% of terrestrial species live in forests</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="1.6">0</span>
+          <span class="stat-label">billion people depend on forests</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="75">0</span>
+          <span class="stat-label">% of land surface is at risk of degradation</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="10">0</span>
+          <span class="stat-label">million hectares of forest lost annually*</span>
+        </div>
+      </div>
+      <p style="text-align: center; font-size: 0.9rem; color: #888; margin-top: 1rem;">*Source: UN Food and Agriculture Organization (FAO), Global Forest Assessment 2020</p>
+    </section>
+
+    <h2 class="section-title">Explore Our Work</h2>
+    <section class="container cards" aria-label="Quick links">
+      <article class="card">
+        <h3>Explore Ecosystems</h3>
+        <p>Learn about forests, wetlands, grasslands, and deserts - the vital ecosystems we work to protect and restore worldwide.</p>
+        <a class="link" href="ecosystem.html">
+          <span>Explore ecosystems</span>
+          <span>→</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Play The Game</h3>
+        <p>Join our interactive Rainwater Collector game and learn about environmental conservation while having fun!</p>
+        <a class="link" href="game.html">
+          <span>Play now</span>
+          <span>→</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Learn More</h3>
+        <p>Discover educational resources, research, and practical guides to understand and protect Earth's ecosystems.</p>
+        <a class="link" href="resources.html">
+          <span>View resources</span>
+          <span>→</span>
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Get Involved</h3>
+        <p>Support our conservation mission. Join us in protecting our planet through donations, volunteering, or partnerships.</p>
+        <a class="link" href="#" onclick="openDonationModal(); return false;">
+          <span>Support now</span>
+          <span>→</span>
+        </a>
+      </article>
+    </section>
+
+    <section class="newsletter">
+      <h2>Stay Connected</h2>
+      <p>Subscribe to our newsletter for updates on conservation efforts, events, and ways to get involved in protecting our planet.</p>
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" class="btn primary">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Donation Modal -->
+<!-- 就在刚才删掉的空位，把下面这段全部贴进去 -->
+  <div id="donationModal" style="display:none; position:fixed; z-index:99999; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); overflow:auto;">
+    <div style="background-color:#fff; margin:10% auto; padding:25px; border-radius:16px; max-width:450px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.3); position:relative;">
+      <span onclick="document.getElementById('donationModal').style.display='none'" style="position:absolute; right:20px; top:15px; font-size:28px; font-weight:bold; cursor:pointer; color:#aaa;">&times;</span>
+      
+      <h3 style="color:#0053a0; margin-bottom:10px; font-family:sans-serif;">Scan to Support Us 🌍</h3>
+      <p style="color:#555; font-size:0.95rem; margin-bottom:15px; font-family:sans-serif;">Scan the Touch 'n Go QR code below to donate.</p>
+      
+      <div style="margin:15px 0;">
+        <img src="images/tng code.jpeg" alt="Touch n Go QR Code" style="width:220px; height:auto; border:4px solid #0053a0; border-radius:12px; padding:5px; background:#fff;">
+      </div>
+
+      <div style="margin:20px 0 15px 0; font-family:sans-serif;">
+        <label style="display:block; font-weight:bold; margin-bottom:10px; color:#333;">Select or Enter Amount (RM):</label>
+        <div style="display:flex; gap:10px; justify-content:center; margin-bottom:15px;">
+          <button type="button" onclick="document.getElementById('modalAmountInput').value=5" style="padding:6px 15px; border:1px solid #0053a0; background:#f0f7ff; color:#0053a0; border-radius:6px; cursor:pointer; font-weight:600;">RM 5</button>
+          <button type="button" onclick="document.getElementById('modalAmountInput').value=10" style="padding:6px 15px; border:1px solid #0053a0; background:#f0f7ff; color:#0053a0; border-radius:6px; cursor:pointer; font-weight:600;">RM 10</button>
+          <button type="button" onclick="document.getElementById('modalAmountInput').value=50" style="padding:6px 15px; border:1px solid #0053a0; background:#f0f7ff; color:#0053a0; border-radius:6px; cursor:pointer; font-weight:600;">RM 50</button>
+        </div>
+        <input type="number" id="modalAmountInput" placeholder="Enter custom amount" min="1" style="width:80%; padding:10px; border:2px solid #ddd; border-radius:8px; font-size:1rem; text-align:center;">
+      </div>
+
+      <button onclick="let amt=document.getElementById('modalAmountInput').value; if(amt>0){alert('Thank you so much! ❤️\n\nWe have registered your support of RM '+amt+'.\n\nYour contribution goes directly towards terrestrial ecosystem protection!'); document.getElementById('donationModal').style.display='none'; document.getElementById('modalAmountInput').value='';}else{alert('Please select or enter a valid donation amount.');}" style="width:80%; padding:12px; background:linear-gradient(135deg, #0053a0 0%, #007aff 100%); color:white; border:none; border-radius:8px; font-size:1.1rem; font-weight:bold; cursor:pointer;">I Have Paid</button>
+    </div>
+  </div>
+  <footer aria-label="Site footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-flex">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="brand-logo"></span>
+            EarthGuard
+          </div>
+          <p class="footer-about">Dedicated to protecting, restoring, and promoting sustainable use of terrestrial ecosystems for future generations.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <nav aria-label="Footer navigation" class="footer-nav">
+            <a href="about.html">About Us</a>
+            <a href="ecosystem.html">Ecosystems</a>
+            <a href="resources.html">Resources</a>
+            <a href="game.html">Game</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Support Us</h3>
+          <nav aria-label="Footer navigation" class="footer-nav">
+            <a href="#" onclick="openDonationModal(); return false;">Donate</a>
+            <a href="contact.html">Get Involved</a>
+            <a href="contact.html">Newsletter</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Connect With Us</h3>
+          <div class="footer-social">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in new tab)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 2 .3 2.7.6.8.3 1.4.7 2 1.3.6.6 1 1.2 1.3 2 .3.7.5 1.5.6 2.7.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 2-.6 2.7-.3.8-.7 1.4-1.3 2-.6.6-1.2 1-2 1.3-.7.3-1.5.5-2.7.6-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-2-.3-2.7-.6-.8-.3-1.4-.7-2-1.3-.6-.6-1-1.2-1.3-2-.3-.7-.5-1.5-.6-2.7C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-2 .6-2.7.3-.8.7-1.4 1.3-2 .6-.6 1.2-1 2-1.3.7-.3 1.5-.5 2.7-.6C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7 .1 5.7.2 4.6.4 3.7.8 2.8 1.2 2 1.7 1.2 2.5.4 3.3 0 4.1 0 5.6 0 7.1 0 7.5 0 12s0 4.9.1 6.4c.2 1.5.6 2.3 1.1 3.2.5.9 1.1 1.6 1.9 2.4s1.5 1.4 2.4 1.9c.9.5 1.7.9 3.2 1.1 1.5.2 1.9.2 6.4.2s4.9 0 6.4-.2c1.5-.2 2.3-.6 3.2-1.1.9-.5 1.6-1.1 2.4-1.9s1.4-1.5 1.9-2.4c.5-.9.9-1.7 1.1-3.2.2-1.5.2-1.9.2-6.4s0-4.9-.2-6.4c-.2-1.5-.6-2.3-1.1-3.2-.5-.9-1.1-1.6-1.9-2.4S21.3.4 20.4 0C19.5-.5 18.7-.9 17.2-1.1 15.7-1.3 15.3-1.3 10.8-1.3 6.3-1.3 5.9-1.3 4.4-1.1 2.9-.9 2.1-.5 1.2 0z" fill="currentColor"/><path d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm6.4-10.4c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5.7-1.5 1.5-1.5 1.5.7 1.5 1.5z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter (opens in new tab)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 5.8c-.6.3-1.2.5-1.9.6.7-.4 1.2-1 1.4-1.8-.7.4-1.4.6-2.2.8C18.6 4.6 17.7 4 16.6 4c-1.6 0-2.9 1.3-2.9 2.9 0 .2 0 .4.1.6C10.4 7.5 7.1 6 5 4c-.3.5-.5 1-.5 1.7 0 1.2.6 2.2 1.6 2.8-.6 0-1.1-.2-1.6-.4v.1c0 1.5 1 2.8 2.4 3.1-.2.1-.4.1-.6.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.2 3 2.2C9 16 7.4 16.6 5.7 16.6c-.4 0-.8 0-1.2-.1C4.9 17.8 6.7 18.6 8.7 18.6c5.2 0 8.1-4.3 8.1-8.1v-.4c.6-.4 1.2-1 1.7-1.6-.5.2-1 .3-1.6.4z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.98 3.5C4.98 4.6 4.07 5.5 2.98 5.5 1.88 5.5.98 4.6.98 3.5.98 2.4 1.88 1.5 2.98 1.5c1.09 0 2 .9 2 .9zM.98 21.5h3.99V7H.98v14.5zM8.98 7v14.5h3.99v-8.1c0-4.3 5.4-4.6 5.4 0v8.1h3.99V12.2c0-8.1-9.2-7.8-12.39-3.8V7H8.98z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <small>© <span id="year"></span> EarthGuard. All rights reserved.</small>
+        </div>
+        <div class="footer-nav">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="#main">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <a href="#main" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M12 4L12 20M12 4L6 10M12 4L18 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </a>
+
+  <script src="js/script.js"></script>
+  <script>
+    function openDonationModal() {
+      document.getElementById('donationModal').style.display = 'block';
+    }
+
+    function closeDonationModal() {
+      document.getElementById('donationModal').style.display = 'none';
+    }
+
+    function selectAmount(amount) {
+      document.getElementById('modalAmountInput').value = amount;
+    }
+
+    function processDonation() {
+      const amount = document.getElementById('modalAmountInput').value;
+      if (amount && amount > 0) {
+        alert(`Thank you so much! ❤️\n\nWe have registered your support of RM ${amount}.\n\nYour contribution goes directly towards terrestrial ecosystem protection!`);
+        closeDonationModal();
+        document.getElementById('modalAmountInput').value = '';
+      } else {
+        alert('Please select or enter a valid donation amount.');
+      }
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('donationModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
